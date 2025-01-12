@@ -72,3 +72,10 @@ print(f"Mean Squared Error (MSE): {mse}")
 print(f"Root Mean Squared Error (RMSE): {rmse}")
 
 forecast.to_csv("forecasted_temperature_with_regressors_and_sites.csv", index=False)
+import pickle
+
+# Save the model
+with open('prophet_forecasting_model.pkl', 'wb') as file:
+    pickle.dump(model, file)
+
+print("Model saved successfully!")
